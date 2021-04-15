@@ -1,6 +1,8 @@
 # Magento Commands lookup
 
 ### MOST USED
+###### Exception log
+`tail -f var/log/exception.log`
 ###### Grunt:
 `grunt clean && grunt exec && grunt less && grunt watch`
 ###### Maintenance:
@@ -28,8 +30,8 @@
 ##### Cleaning the cache in the website:
 `php bin/magento cache:flush`
 ##### Enable/Disable cache:
-`php bin/magento cache:enable
- php bin/magento cache:disable`
+`php bin/magento cache:enable`
+`php bin/magento cache:disable`
 ##### View status of cache:
 `bin/magento cache:status`
 
@@ -54,8 +56,8 @@
 ### MAINTENANCE
 
 ##### Enable / Disable maintenance:
-`bin/magento maintenance:enable
- bin/magento maintenance:disable`
+`bin/magento maintenance:enable`
+`bin/magento maintenance:disable`
 
 
 ### CHANGE MODE
@@ -63,9 +65,9 @@
 ##### Show current mode:
 `bin/magento deploy:mode:show`
 ##### Change mode:
-`bin/magento deploy:mode:set production
- bin/magento deploy:mode:set default
- bin/magento deploy:mode:set developer`
+`bin/magento deploy:mode:set production`
+`bin/magento deploy:mode:set default`
+`bin/magento deploy:mode:set developer`
 
 
 ### INDEXER
@@ -90,34 +92,47 @@
 
 # Specific problems or tasks
 
-* SHITSHOW WITH URLS *
+### URL REWRITE
 
-!!!TRUNKATE url_rewrites!!!
-php bin/magento  cadence:urldedup:categories
-php bin/magento  cadence:urldedup:products
-php bin/magento ok:urlrewrites:regenerate
-php bin/magento cache:clean
-php bin/magento cache:flush
-bin/magento indexer:reindex
+**!!!TRUNKATE url_rewrites!!!**
+###### Install Cadence
+`mkdir -p app/code/Cadence/UrlDedup && git clone https://github.com/cadencelabs/urldedup app/code/Cadence/UrlDedup`
+
+`php bin/magento setup:upgrade`
+
+`php bin/magento  cadence:urldedup:categories`
+
+`php bin/magento  cadence:urldedup:products`
+
+###### Regenerate URL
+
+`php bin/magento ok:urlrewrites:regenerate`
+
+###### Flush the Cache
+
+`php bin/magento cache:clean`
+`php bin/magento cache:flush`
+
+###### Reindex
+
+`bin/magento indexer:reindex`
 
 
-* ELASTICSEARCH NO ALIVE NODES *
+### ELASTICSEARCH NO ALIVE NODES
 
 ssh to root user
-sudo systemctl start elasticsearch
-sudo systemctl status elasticsearch
 
-/**/
-xdebug.remote_enable=0
-xdebug.remote_autostart=0  
+`sudo systemctl start elasticsearch`
+`sudo systemctl status elasticsearch`
 
+### UPDATE MAGENTO 
 
-* UPDATE MAGENTO *
+`composer require magento/product-community-edition=2.4.1 --no-update`
+`composer update`
 
-composer require magento/product-community-edition=2.4.1 --no-update
-composer update
+### Virtualmin specific config for .htaccess (use after updating magento)
 
-find . -name .htaccess -exec sed -i 's/FollowSymLinks/SymLinksIfOwnerMatch/g' {} \;
-find . -name .htaccess -exec sed -i 's/Options All -Indexes/Options -Indexes/g' {} \;
+`find . -name .htaccess -exec sed -i 's/FollowSymLinks/SymLinksIfOwnerMatch/g' {} \;`
+`find . -name .htaccess -exec sed -i 's/Options All -Indexes/Options -Indexes/g' {} \;`
 
 
