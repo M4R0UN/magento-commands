@@ -23,14 +23,14 @@
 
 ### CACHE MANAGEMENT
 
-###### Deleting all items from enabled Magento cache types only. Can clean specific types, e.g.: config, layout, block_html, collections, reflection, db_ddl, eav, etc.
+##### Deleting all items from enabled Magento cache types only. Can clean specific types, e.g.: config, layout, block_html, collections, reflection, db_ddl, eav, etc.
 `php bin/magento cache:clean`
-###### Cleaning the cache in the website:
+##### Cleaning the cache in the website:
 `php bin/magento cache:flush`
-###### Enable/Disable cache:
+##### Enable/Disable cache:
 `php bin/magento cache:enable
  php bin/magento cache:disable`
-###### View status of cache:
+##### View status of cache:
 `bin/magento cache:status`
 
 
@@ -43,26 +43,26 @@
 
 ### ENABLE / DISABLE EXTENSION
 
-###### View all modules:
+##### View all modules:
 `php bin/magento module:status`
-###### Disable module:
+##### Disable module:
 `php bin/magento module:disable <ExtensionProvider_ExtensionName> --clear-static-content`
-###### Delete module:
+##### Delete module:
 `rm -rf app/code/<ExtensionProvider>/<ExtensionName>`
 
 
 ### MAINTENANCE
 
-###### Enable / Disable maintenance:
+##### Enable / Disable maintenance:
 `bin/magento maintenance:enable
  bin/magento maintenance:disable`
 
 
 ### CHANGE MODE
 
-###### Show current mode:
+##### Show current mode:
 `bin/magento deploy:mode:show`
-###### Change mode:
+##### Change mode:
 `bin/magento deploy:mode:set production
  bin/magento deploy:mode:set default
  bin/magento deploy:mode:set developer`
@@ -70,11 +70,11 @@
 
 ### INDEXER
 
-###### View list of indexers:
+##### View list of indexers:
 `bin/magento indexer:info`
-###### View status of all indexers:
+##### View status of all indexers:
 `bin/magento indexer:status [indexer]`
-###### Reindex all indexers one time:
+##### Reindex all indexers one time:
 `bin/magento indexer:reindex`
 
 
