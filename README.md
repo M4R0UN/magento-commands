@@ -1,43 +1,50 @@
-# Magento Commands
-Quick commands lookup library for magento
+# Magento Commands lookup
+
+######MostUsed
+
+`grunt clean && grunt exec && grunt less && grunt watch`
+
+`php bin/magento setup:upgrade && php bin/magento cache:flush && php bin/magento cache:clean && php bin/magento setup:static-content:deploy -f && php bin/magento setup:di:compile`
+
+Update the DB:
+`php bin/magento setup:upgrade`
+Change URL of the static files and force browser to load the new version:
+`php bin/magento setup:static-content:deploy -f
+
+php bin/magento setup:di:compile`
 
 
-* FULL CLEAN UP *
+######Clear Cache
 
-grunt clean && grunt exec && grunt less && grunt watch
+Deleting all items from enabled Magento cache types only. Can clean specific types, e.g.: config, layout, block_html, collections, reflection, db_ddl, eav, etc.
+`php bin/magento cache:clean`
+Cleaning the cache in the website:
+`php bin/magento cache:flush`
+Enable/Disable cache:
+`php bin/magento cache:enable
+php bin/magento cache:disable`
 
-php bin/magento setup:upgrade && php bin/magento cache:flush && php bin/magento cache:clean && php bin/magento setup:static-content:deploy -f && php bin/magento setup:di:compile
+######REMOVE CACHED FOLDERS
 
+**!!! backup the pub/static/.htaccess !!!**
 
-* RUN COMMAND AS SUDO *
+`rm -rf pub/static/* && rm -rf var/cache/* && rm -rf var/composer_home && rm -rf var/generation && rm -rf var/page_cache && rm -rf var/view_preprocessed`
 
-ssh -t $USER@server006.web.com "sudo cat /etc/shadow"
+######ENABLE / DISABLE EXTENSION
 
-
-* CLEAR THE COMPILED CODE AND CACHE *
-
-php7.3 bin/magento setup:upgrade
-php7.3 bin/magento cache:clean
-php7.3 bin/magento cache:flush
-php7.3 bin/magento setup:static-content:deploy -f
-php7.3 bin/magento setup:di:compile
-
-
-* ENABLE / DISABLE EXTENSION *
-
-php bin/magento module:status       (view all modules)
-php bin/magento module:disable <ExtensionProvider_ExtensionName> --clear-static-content
-php bin/magento setup:upgrade        (update the DB)
-
-cd app/code/<ExtensionProvider>/
-rm -rf <ExtensionName>
+View all modules:
+`php bin/magento module:status`
+Disable module:
+`php bin/magento module:disable <ExtensionProvider_ExtensionName> --clear-static-content`
+Delete module:
+ `rm -rf app/code/<ExtensionProvider>/<ExtensionName>`
+ 
 
 
-* REMOVE CACHED FOLDERS *
+######RUN COMMAND AS SUDO
 
-!!! backup the pub/static/.htaccess !!!
+`ssh -t $USER@server006.web.com "sudo cat /etc/shadow"`
 
-rm -rf pub/static/* && rm -rf var/cache/* && rm -rf var/composer_home && rm -rf var/generation && rm -rf var/page_cache && rm -rf var/view_preprocessed
 
 
 /*SWITCH MODE*/
