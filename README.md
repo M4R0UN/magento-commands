@@ -1,20 +1,23 @@
 # Magento Commands lookup
 
 ### MOST USED
-
+###### Grunt:
 `grunt clean && grunt exec && grunt less && grunt watch`
+###### Maintenance:
 `bin/magento maintenance:enable`
+###### List of extentions:
 `php bin/magento module:status`
+###### Full cleanup:
 `php bin/magento setup:upgrade && php bin/magento cache:flush && php bin/magento cache:clean && php bin/magento setup:static-content:deploy -f && php bin/magento  setup:di:compile`
 
 
 ### CLEANUP
 
-###### Update the DB:
+##### Update the DB:
 `php bin/magento setup:upgrade`
-###### Change URL of the static files and force browser to load the new version:
+##### Change URL of the static files and force browser to load the new version:
 `php bin/magento setup:static-content:deploy -f`
-###### Compile the code. Generate the contents of the *generated* folder:
+##### Compile the code. Generate the contents of the *generated* folder:
 `php bin/magento setup:di:compile`
 
 
@@ -85,7 +88,7 @@
 `ssh -t $USER@server006.web.com "sudo cat /etc/shadow"`
 
 
-# Specific problems
+# Specific problems or tasks
 
 * SHITSHOW WITH URLS *
 
