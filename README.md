@@ -3,6 +3,8 @@
 ### MOST USED
 ###### Exception log
 `tail -f var/log/exception.log`
+###### Var clean folder:
+`php bin/magento v:c`
 ###### Grunt:
 `grunt clean && grunt exec && grunt less && grunt watch`
 ###### Maintenance:
@@ -11,8 +13,7 @@
 `php bin/magento module:status`
 ###### Full cleanup:
 `php bin/magento se:up && php bin/magento c:f && php bin/magento c:c && php bin/magento s:s:d -f && php bin/magento  s:d:c`
-###### Var clean folder:
-`php bin/magento v:c`
+
 
 ### CLEANUP
 
