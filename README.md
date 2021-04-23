@@ -31,8 +31,9 @@
 `php bin/magento cache:clean`
 ##### Cleaning the cache in the website:
 `php bin/magento cache:flush`
-##### Enable/Disable cache:
+##### Enable cache:
 `php bin/magento cache:enable`
+##### Disable cache:
 `php bin/magento cache:disable`
 ##### View status of cache:
 `bin/magento cache:status`
@@ -57,8 +58,9 @@
 
 ### MAINTENANCE
 
-##### Enable / Disable maintenance:
+##### Enable:
 `bin/magento maintenance:enable`
+##### Disable maintenance:
 `bin/magento maintenance:disable`
 
 
@@ -67,8 +69,11 @@
 ##### Show current mode:
 `bin/magento deploy:mode:show`
 ##### Change mode:
+###### Production
 `bin/magento deploy:mode:set production`
+###### Default
 `bin/magento deploy:mode:set default`
+###### Developer
 `bin/magento deploy:mode:set developer`
 
 
