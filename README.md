@@ -1,4 +1,4 @@
-# Magento Commands lookup
+# Magento / Linux Commands lookup
 
 ### MOST USED
 ###### Search first 2 occurences
