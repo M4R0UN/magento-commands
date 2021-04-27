@@ -101,6 +101,12 @@
 
 # Specific problems or tasks
 
+### Magento 2.4.1 ReCaptcha disable [Invalid block type: MSP\ReCaptcha\Block\Frontend\ReCaptcha]
+###### will disable recaptcha on the admin login
+`bin/magento security:recaptcha:disable-for-user-login`
+
+
+
 ### URL REWRITE
 
 **!!!TRUNKATE url_rewrites!!!**
