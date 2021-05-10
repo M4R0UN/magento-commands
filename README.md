@@ -1,8 +1,8 @@
 # Magento / Linux Commands lookup
 
 ### MOST USED
-###### Search first 2 occurences
-`grep -r '' | sed 2q`
+###### Search first 5 occurences
+`grep -r '' | sed 5q`
 ###### Exception log
 `tail -f var/log/exception.log`
 ###### Var clean folder:
