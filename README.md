@@ -78,6 +78,9 @@
 ###### Developer
 `bin/magento deploy:mode:set developer`
 
+### CRON
+###### Check the configured cron jobs
+`crontab -l`
 
 ### INDEXER
 
