@@ -134,6 +134,7 @@
 ###### Flush the Cache
 
 `php bin/magento cache:clean`
+
 `php bin/magento cache:flush`
 
 ###### Reindex
@@ -146,16 +147,19 @@
 ssh to root user
 
 `sudo systemctl start elasticsearch`
+
 `sudo systemctl status elasticsearch`
 
 ### UPDATE MAGENTO 
 
 `composer require magento/product-community-edition=2.4.1 --no-update`
+
 `composer update`
 
 ### Virtualmin specific config for .htaccess (use after updating magento)
 
 `find . -name .htaccess -exec sed -i 's/FollowSymLinks/SymLinksIfOwnerMatch/g' {} \;`
+
 `find . -name .htaccess -exec sed -i 's/Options All -Indexes/Options -Indexes/g' {} \;`
 
 
