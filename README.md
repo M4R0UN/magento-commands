@@ -81,11 +81,11 @@
 
 ### CRON
 
-###### Check the configured cron jobs
+##### Check the configured cron jobs
 `crontab -l`
-###### Reindex
+##### Reindex
 `php bin/magento indexer:reindex`
-###### Check cron is working
+##### Check cron is working
 `php bin/magento cron:run`
 
 
