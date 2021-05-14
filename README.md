@@ -78,9 +78,16 @@
 ###### Developer
 `bin/magento deploy:mode:set developer`
 
+
 ### CRON
+
 ###### Check the configured cron jobs
 `crontab -l`
+###### Reindex
+`php bin/magento indexer:reindex`
+###### Check cron is working
+`php bin/magento cron:run`
+
 
 ### INDEXER
 
@@ -107,12 +114,6 @@
 ### Magento 2.4.1 ReCaptcha disable [Invalid block type: MSP\ReCaptcha\Block\Frontend\ReCaptcha]
 ###### will disable recaptcha on the admin login
 `bin/magento security:recaptcha:disable-for-user-login`
-
-### MAGENTO CRON IS NOT RUNNING ISSUE
-###### From the root of your magento path
-`php bin/magento indexer:reindex`
-###### Check cron is working or not, run below command
-`php bin/magento cron:run`
 
 ### URL REWRITE
 
