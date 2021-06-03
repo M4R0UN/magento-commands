@@ -48,14 +48,16 @@
 `rm -rf pub/static/* && rm -rf var/cache/* && rm -rf var/composer_home && rm -rf var/generation && rm -rf var/page_cache && rm -rf var/view_preprocessed`
 
 
-### ENABLE / DISABLE EXTENSION
+### ENABLE / DISABLE / REMOVE EXTENSION
 
 ##### View all modules:
 `php bin/magento module:status`
 ##### Disable module:
 `php bin/magento module:disable <ExtensionProvider_ExtensionName> --clear-static-content`
-##### Delete module:
+##### Delete module files:
 `rm -rf app/code/<ExtensionProvider>/<ExtensionName>`
+##### Remove module:
+`composer remove VendorName/VendorExtensionRepository`
 
 
 ### MAINTENANCE
