@@ -165,3 +165,10 @@ ssh to root user
 `find . -name .htaccess -exec sed -i 's/Options All -Indexes/Options -Indexes/g' {} \;`
 
 
+## Force php7.1
+
+sudo update-alternatives --set php /usr/bin/php7.1
+service apache2 restart
+
+
+
