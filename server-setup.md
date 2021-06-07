@@ -25,11 +25,12 @@
 `ssh root@123.456.78.90`
 ##### Check if the hostname is correct and edit it if its wrong
 `sudo nano /etc/hostname`
-###### Here you should see your hostname, not the FQDN, for example if you see <dev.maroungrey.com> change it to <dev>
+###### Here you should see your hostname, not the FQDN, for example if you see `dev.maroungrey.com` change it to `dev`
 ##### Next, you want to check if /etc/hosts file is right:
 `sudo nano /etc/hosts`
 ###### Here you should see something like:
 `127.0.1.1   dev.maroungrey.com dev`
+######
 `127.0.0.1   localhost`
 ###### If you had to edit anything, run:
 `sudo reboot`
@@ -38,6 +39,7 @@
 ##### Get the package and install it:
 
 `wget http://software.virtualmin.com/gpl/scripts/install.sh`
+######
 `sudo /bin/sh install.sh`
 
 ### DNS setup
@@ -46,17 +48,11 @@
 ###### Here is the example of configs that you need:
 
 | Type | Name | Content | TTL | Proxy status |
-| --- | --- | --- | --- | --- |
 | A | maroungrey.com | 123.456.78.90 | Auto | DNS only |
-| --- | --- | --- | --- | --- |
 | CNAME | dev | maroungrey.com | Auto | DNS only |
-| --- | --- | --- | --- | --- |
 | CNAME | www | maroungrey.com | Auto | DNS only |
-| --- | --- | --- | --- | --- |
 | CNAME | www.dev | maroungrey.com | Auto | DNS only |
-| --- | --- | --- | --- | --- |
 | TXT | nxdomain | _acme-challenge.www.dev.maroungrey.com | Auto | DNS only |
-| --- | --- | --- | --- | --- |
 
 ### Virtualmin
 ###### After you created the dns records you should be able to access the virtualmin by this url:
@@ -77,6 +73,7 @@
 `add-apt-repository ppa:ondrej/php && apt-get update`
 ###### Install PHP packages:
 `apt-get install php7.1 php7.1-mysql php7.1-cgi php7.1-cli php7.1-fpm`
+######
 `apt-get install php7.2 php7.2-mysql php7.2-cgi php7.2-cli php7.2-fpm`
 ###### Now you can choose different php version in:
 `Virtualmin -> Server Configuration -> PHP Options -> Versions`
