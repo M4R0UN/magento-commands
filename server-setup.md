@@ -70,12 +70,9 @@
 ##### Now the setup is pretty much good to go, you can set up the backups now and if you need to install different php version here are the steps:
 ###### Ssh to the root:
 `ssh root@123.456.78.90`
-###### Get the PPA
-`add-apt-repository ppa:ondrej/php && apt-get update`
-###### Install PHP packages:
-`apt-get install php7.1 php7.1-mysql php7.1-cgi php7.1-cli php7.1-fpm`
-######
-`apt-get install php7.2 php7.2-mysql php7.2-cgi php7.2-cli php7.2-fpm`
+
+https://tecadmin.net/install-php-ubuntu-20-04/
+
 ###### Now you can choose different php version in:
 `Virtualmin -> Server Configuration -> PHP Options -> Versions`
 
