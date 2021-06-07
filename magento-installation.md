@@ -5,3 +5,4 @@
 `sudo update-alternatives --set php /usr/bin/php7.1`
 cd to public html and run:
 `composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.3.0`
+login in https://marketplace.magento.com/ go to profile -> access keys and copy the credentials
