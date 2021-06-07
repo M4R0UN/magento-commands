@@ -1,4 +1,4 @@
-# Server setup with digital ocean and virtualmin / webmin
+# Ubuntu 20.04 setup with digital ocean and virtualmin / webmin
 
 ### Create the droplet in digital ocean
 ###### I prefer 4gb of ram since I had some memory issues installing magento on 2gb. Wordpress was fine though
