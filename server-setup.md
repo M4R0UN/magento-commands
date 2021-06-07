@@ -48,6 +48,7 @@
 ###### Here is the example of configs that you need:
 
 | Type | Name | Content | TTL | Proxy status |
+| --- | --- | --- | --- | --- |
 | A | maroungrey.com | 123.456.78.90 | Auto | DNS only |
 | CNAME | dev | maroungrey.com | Auto | DNS only |
 | CNAME | www | maroungrey.com | Auto | DNS only |
