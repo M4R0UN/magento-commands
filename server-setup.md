@@ -67,6 +67,12 @@
 ###### Enable the SSL and create a new SSL certificate in Let's Encrypt
 
 ### After steps
+##### Now you can create a virtual server
+`Virtualmin -> Create New Virtual Server`
+###### Fill out the domain name and password, add necessary DNS records in cloudflare and create ssl with Let's Encrypt. After that you can install CMS and start developing your website. 
+
+
+### Additional settings
 ##### Now the setup is pretty much good to go, you can set up the backups now and if you need to install different php version here are the steps:
 ###### Ssh to the root:
 `ssh root@123.456.78.90`
