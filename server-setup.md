@@ -59,7 +59,7 @@
 ###### After you created the dns records you should be able to access the virtualmin by this url:
 `https://gcp.maroungrey.com:10000/`
 ###### or ip:
-`https://123/456/78/90:10000/`
+`https://123.456.78.90:10000/`
 ###### Now virtualmin will walk you through the post installation configs. After you finish that you need to create ssl certificate in:
 `Virtualmin -> Server Configuration -> SSL Certificate -> Let's Encrypt`
 ###### After that you need to enable the SSL Certificate in Webmin:
