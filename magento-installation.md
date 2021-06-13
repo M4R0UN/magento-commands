@@ -1,15 +1,10 @@
-# Magento installation for virtualmin
-###### I will be installing magento 2.3.0 which compatible with php7.1 and 7.2, before the installation make sure you have all necessary packages. Ssh to the root and run:
-`sudo apt install php7.1 libapache2-mod-php7.1 php7.1-common php7.1-gmp php7.1-curl php7.1-soap php7.1-bcmath php7.1-intl php7.1-mbstring php7.1-xmlrpc php7.1-mcrypt php7.1-mysql php7.1-gd php7.1-xml php7.1-cli php7.1-zip`
+# Magento 2.4.1 installation for virtualmin
 
-### Create a new virtual server, create the ssl, create the dns record and change the php version to 7.1, ssh to your new server and check the php version. If php version in ssh is not 7.1 then ssh to the root and run:
+##### ssh to the root of your server and run `apt get composer`
+##### After that go into the virtualmin, create a new virtual server, add dns records, add ssl wit Let's Encrypt. After that ssh into your new virtual server and run `composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4.1`. It will ask you for your username and password, to get them go to https://marketplace.magento.com/ go to profile -> access keys and copy the credentials. public key is your username, private key is the password. Then composer will ask you if you want to store your credentials in the auth.json, you can say yes. then composer will download all dependencies. After its done run these two commands:
 
-`sudo update-alternatives --set php /usr/bin/php7.1`
-
-### Then go to your virtual server, cd to public_html and run:
-`composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.3.0`
-
-### Login in https://marketplace.magento.com/ go to profile -> access keys and copy the credentials. public key is your username, private key is the password. Then composer will ask you if you want to store your credentials in the auth.json, you can say yes. then composer will download all dependencies. After its done if you are using virtualmin you need to run these:
 `find . -name .htaccess -exec sed -i 's/FollowSymLinks/SymLinksIfOwnerMatch/g' {} \;`
 ###
 `find . -name .htaccess -exec sed -i 's/Options All -Indexes/Options -Indexes/g' {} \;`
+
+
