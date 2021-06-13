@@ -158,6 +158,15 @@ ssh to root user
 
 `composer update`
 
+### Minimum-Stability
+`composer config minimum-stability dev`
+
+`composer config prefer-stable true`
+
+`composer require --no-update "vendor/package-name:version"`
+
+`composer update`
+
 ### Virtualmin specific config for .htaccess (use after updating magento)
 
 `find . -name .htaccess -exec sed -i 's/FollowSymLinks/SymLinksIfOwnerMatch/g' {} \;`
