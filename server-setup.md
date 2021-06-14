@@ -68,22 +68,24 @@
 
 
 # Installing MySQL and phpmyadmin
-###### Test if you are able to log in into mysql. If you are then proceed to Install phpmyadmin step. If you cant, read below.
-`sudo mysql`
-##### or 
+###### Test if you are able to log in into mysql. You need to enter the password that you specified in virtualmin post installation configs for mySQL.
 `mysql -u root -p`
+##### Configure the root account to authenticate with a password
+`ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password';`
+##### Create a new db user
+`CREATE USER 'maroun'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password';`
+##### Grant all priveleges to the new user
+`GRANT ALL PRIVILEGES ON *.* TO 'maroun'@'localhost' WITH GRANT OPTION;`
 ##### Exit
 `exit`
 
 ### Install phpmyadmin
 ###### Follow this documentation
-`https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-20-04`
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-20-04
 ###### If after that you see the php script instead of the phpmyadmin page, run following commands:
-`$ sudo apt purge libapache2-mod-php7.4 libapache2-mod-php
-$ sudo apt-get install libapache2-mod-php7.4
+`$ sudo apt-get install libapache2-mod-php7.4
 $ sudo a2enmod php7.4
-$ sudo service apache2 stop
-$ sudo service apache2 start`
+$ sudo service apache2 restart`
 
 
 # After steps
