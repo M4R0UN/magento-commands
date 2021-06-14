@@ -42,7 +42,7 @@
 ######
 `sudo /bin/sh install.sh`
 
-### DNS setup
+# DNS setup
 ##### Next step is setting up the DNS record in cloudflare
 ###### Add site and go to DNS tab. Now you need to set up few records.
 ###### Here is the example of configs that you need:
@@ -55,7 +55,7 @@
 | CNAME | www.gcp | maroungrey.com | Auto | DNS only |
 | TXT | nxdomain | _acme-challenge.www.gcp.maroungrey.com | Auto | DNS only |
 
-### Virtualmin
+# Virtualmin Configurations
 ###### After you created the dns records you should be able to access the virtualmin by this url:
 `https://gcp.maroungrey.com:10000/`
 ###### or ip:
