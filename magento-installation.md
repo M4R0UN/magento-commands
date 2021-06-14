@@ -34,7 +34,8 @@ It will ask you for your username and password, to get them go to https://market
 `nano /etc/apache2/mods-enabled/php7.4.conf`
 ### This is the correct script
 
-`<FilesMatch ".+\.ph(ar|p|tml)$">
+```
+<FilesMatch ".+\.ph(ar|p|tml)$">
 #    SetHandler application/x-httpd-php
 </FilesMatch>
 <FilesMatch ".+\.phps$">
@@ -62,8 +63,7 @@ It will ask you for your username and password, to get them go to https://market
 
 AddType  application/x-httpd-php         .php
 AddType  application/x-httpd-php-source  .phps
-
-`
+```
 
 ###### Restart the apache
 `sudo service apache2 restart`
