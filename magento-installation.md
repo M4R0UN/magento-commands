@@ -31,11 +31,7 @@ It will ask you for your username and password, to get them go to https://market
 `find . -name .htaccess -exec sed -i 's/Options All -Indexes/Options -Indexes/g' {} \;`
 ### Somtimes I run into error where php script downloads instead of executing
 `nano /etc/apache2/mods-enabled/php7.4.conf`
-### Comment following lines:
-`SetHandler application/x-httpd-php`
-
-`SetHandler application/xhttpd-php-source`
-
+### Comment following line:
 `php_admin_flag engine Off`
 
 ###### Restart the apache
