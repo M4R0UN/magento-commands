@@ -39,6 +39,8 @@ It will ask you for your username and password, to get them go to https://market
 `find . -name .htaccess -exec sed -i 's/Options All -Indexes/Options -Indexes/g' {} \;`
 
 ### 
-`bin/magento setup:install --base-url=http://test.maroungrey.com/ --db-host=localhost --db-name=dbtest --db-user=test --db-password=password --admin-firstname=Maroun --admin-lastname=Magento --admin-email=myemail@gmail.com --admin-user=magentoadmin --admin-password=password --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1
+`bin/magento setup:install --base-url=http://test.maroungrey.com/ --db-host=localhost --db-name=dbtest --db-user=test --db-password=password --admin-firstname=Maroun --admin-lastname=Magento --admin-email=myemail@gmail.com --admin-user=magentoadmin --admin-password=password --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1`
+### Sample data
+`bin/magento sampledata:deploy`
 
 
