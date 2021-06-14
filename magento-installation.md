@@ -8,17 +8,7 @@
 `sudo add-apt-repository ppa:ondrej/php`
 ###### Install all necessary php packages
 `sudo apt install php7.4-common php7.4-gmp php7.4-curl php7.4-soap php7.4-bcmath php7.4-intl php7.4-mbstring php7.4-xmlrpc php7.4-mcrypt php7.4-mysql php7.4-gd php7.4-xml php7.4-cli php7.4-zip`
-###### Magento 2.4.1 requires the elasticsearch
-`sudo apt update`
-`sudo apt install elasticsearch`
-###### Next configure the elasticsearch
-`sudo nano /etc/elasticsearch/elasticsearch.yml`
-###### Here you need to find the line that specifies hosts, uncomment it and change it to localhost, so it will look like that:
-`network.host: localhost`
-###### Now let's enable elasticsearch
-`sudo systemctl start elasticsearch`
-`sudo systemctl enable elasticsearch`
-### Thats the basic configurations for elasticsearch, for more information go to
+###### Magento 2.4.1 requires the elasticsearch follow this documentation to set it up
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04
 
 
