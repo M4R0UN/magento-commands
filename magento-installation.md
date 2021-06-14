@@ -11,6 +11,8 @@
 `sudo apt install php7.4-common php7.4-gmp php7.4-curl php7.4-soap php7.4-bcmath php7.4-intl php7.4-mbstring php7.4-xmlrpc php7.4-mcrypt php7.4-mysql php7.4-gd php7.4-xml php7.4-cli php7.4-zip`
 ###### Magento 2.4.1 requires the elasticsearch follow this documentation to set it up
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04
+### (optional)
+`apt install mlocate`
 
 
 
@@ -27,8 +29,23 @@ It will ask you for your username and password, to get them go to https://market
 `find . -name .htaccess -exec sed -i 's/FollowSymLinks/SymLinksIfOwnerMatch/g' {} \;`
 ###
 `find . -name .htaccess -exec sed -i 's/Options All -Indexes/Options -Indexes/g' {} \;`
+### Somtimes I run into error where php script downloads instead of executing
+`nano /etc/apache2/mods-enabled/php7.4.conf`
+### Comment following lines:
+`SetHandler application/x-httpd-php`
 
-### 
+`SetHandler application/xhttpd-php-source`
+
+`php_admin_flag engine Off`
+
+###### Restart the apache
+`sudo service apache2 restart`
+
+
+
+
+
+### installing magento setup 
 `bin/magento setup:install --base-url=http://test.maroungrey.com/ --db-host=localhost --db-name=dbtest --db-user=test --db-password=password --admin-firstname=Maroun --admin-lastname=Magento --admin-email=myemail@gmail.com --admin-user=magentoadmin --admin-password=password --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1`
 ### Sample data
 `bin/magento sampledata:deploy`
