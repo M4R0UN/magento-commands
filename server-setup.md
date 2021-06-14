@@ -74,18 +74,7 @@
 `mysql -u root -p`
 ##### Exit
 `exit`
-### Configuring/Installing My SQL
-##### Virtualmin installs mysql automatically but I sometimes bump into the autorization error when trying to setup MySQL, so I just reinstall it and start from scratch. If you experiencing the same follow those steps:
-##### Uninstall mysql (from the root)
-`sudo apt-get remove --purge mysql*`
-`sudo apt-get autoremove`
-`sudo apt-get autoclean`
-###### Install mysql
-`sudo apt install mysql-server`
-###### This script will remove some insecure default settings and lock down access to your database system. Firstly it will ask you to enable VALIDATE PASSWORD COMPONENT. Choose No for that one, set the password and proceed through the other settings as you like, I usually just put no for everything.
-`sudo mysql_secure_installation`
-###### Test again if you are able to log in into mysql
-`sudo mysql`
+
 ### Install phpmyadmin
 ###### Follow this documentation
 `https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-20-04`
