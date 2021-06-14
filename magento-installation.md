@@ -3,7 +3,8 @@
 ### Prerequisites
 
 ##### ssh to the root of your server (ssh root@123.456.78.90) and run those commands:
-
+###### install composer
+`apt install composer`
 ###### Add repository for necessary php packages
 `sudo add-apt-repository ppa:ondrej/php`
 ###### Install all necessary php packages
