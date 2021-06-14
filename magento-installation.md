@@ -29,10 +29,41 @@ It will ask you for your username and password, to get them go to https://market
 `find . -name .htaccess -exec sed -i 's/FollowSymLinks/SymLinksIfOwnerMatch/g' {} \;`
 ###
 `find . -name .htaccess -exec sed -i 's/Options All -Indexes/Options -Indexes/g' {} \;`
-### Somtimes I run into error where php script downloads instead of executing
+
+### You would need to set the correct configs for php
 `nano /etc/apache2/mods-enabled/php7.4.conf`
-### Comment following line:
-`php_admin_flag engine Off`
+### This is the correct script
+
+`<FilesMatch ".+\.ph(ar|p|tml)$">
+#    SetHandler application/x-httpd-php
+</FilesMatch>
+<FilesMatch ".+\.phps$">
+#    SetHandler application/x-httpd-php-source
+    # Deny access to raw php sources by default
+    # To re-enable it's recommended to enable access to the files
+    # only in specific virtual host or directory
+    Require all denied
+</FilesMatch>
+# Deny access to files without filename (e.g. '.php')
+<FilesMatch "^\.ph(ar|p|ps|tml)$">
+    Require all denied
+</FilesMatch>
+
+# Running PHP scripts in user directories is disabled by default
+# 
+# To re-enable PHP in user directories comment the following lines
+# (from <IfModule ...> to </IfModule>.) Do NOT set it to On as it
+# prevents .htaccess files from disabling it.
+<IfModule mod_userdir.c>
+    <Directory /home/*/public_html>
+#        php_admin_flag engine Off
+    </Directory>
+</IfModule>
+
+AddType  application/x-httpd-php         .php
+AddType  application/x-httpd-php-source  .phps
+
+`
 
 ###### Restart the apache
 `sudo service apache2 restart`
