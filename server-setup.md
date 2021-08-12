@@ -84,7 +84,9 @@
 https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-20-04
 ###### If after that you see the php script instead of the phpmyadmin page, run following commands:
 `$ sudo apt-get install libapache2-mod-php7.4`
+##
 `$ sudo a2enmod php7.4`
+##
 `$ sudo service apache2 restart`
 
 
