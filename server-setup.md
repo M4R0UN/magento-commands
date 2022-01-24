@@ -22,7 +22,7 @@
 
 ### Check if the hostname setted up correctly
 ##### Now you can ssh to your user by only executing:
-`ssh root@123.456.78.90`
+`ssh 123.456.78.90`
 ##### Check if the hostname is correct and edit it if its wrong
 `sudo nano /etc/hostname`
 ###### Here you should see your hostname, not the FQDN, for example if you see `gcp.maroungrey.com` change it to `gcp`
