@@ -52,4 +52,4 @@ to
 {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
 {{ 'bootstrap.min.js' | asset_url | script_tag }}
 ```
-5. Its better practise to move `{{ 'bootstrap.min.js' | asset_url | script_tag }}` before </body> tag.
+5. Its better practise to move `{{ 'bootstrap.min.js' | asset_url | script_tag }}` before `</body>` tag.
