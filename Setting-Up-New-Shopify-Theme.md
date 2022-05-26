@@ -1,11 +1,15 @@
 # Theory
 ### What are the Liquid Filters
-Filters are the methods that modify the output of
+Filters are the methods that modify the output of <br><br>
 Strings <br>
 Numbers <br>
 Variables <br>
-Objects <br>
+Objects <br><br>
 They are placed within an output tag `{{}}` and are denoted by a pipe character `|`
+
+### Filters
+**asset_url** is a URL that returns the URL of a file inside the assets folder of a theme.<br>
+**stylesheet_tag** or **script_tag** is an HTML filter used to create HTML elements based on liquid properties or store assets that you specify. <br>
 
 # Setting up new empty shopify theme with theme kit
 
@@ -38,4 +42,14 @@ It can be done either through content delivery network or by downloading & uploa
 1. Go to getbootstrap.com > Download > Compiled CSS and JS Download
 2. In css folder (of the file that you just downloaded) copy *bootstrap.min.css* and *bootstrap.min.css.map* and put it into the project **assets** folder
 3. In js folder (of the file that you just downloaded) copy *bootstrap.min.js* and *bootstrap.min.js.map* and put it into the project **assets** folder
-4. In VS code go to layout/theme.liquid 
+4. In VS code go to layout/theme.liquid change
+```
+{{ 'application.css' | asset_url | stylesheet_tag }}
+{{ 'application.js' | asset_url | script_tag }}
+```
+to
+```
+{{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+{{ 'bootstrap.min.js' | asset_url | script_tag }}
+```
+5. Its better practise to move `{{ 'bootstrap.min.js' | asset_url | script_tag }}` before </body> tag.
