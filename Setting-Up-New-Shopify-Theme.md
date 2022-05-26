@@ -1,3 +1,12 @@
+# Theory
+### What are the Liquid Filters
+Filters are the methods that modify the output of
+Strings <br>
+Numbers <br>
+Variables <br>
+Objects <br>
+They are placed within an output tag `{{}}` and are denoted by a pipe character `|`
+
 # Setting up new empty shopify theme with theme kit
 
 ### Install Theme Kit
@@ -21,3 +30,12 @@ Or follow instructions <a href="https://shopify.dev/themes/tools/theme-kit">here
     `theme new --password=[password from previous step] --store='mystore.myshopify.com' --name=[name your theme]`
     
 ###### Dont forget to add gitignore for config.yml
+
+
+# Setting up Bootstrap
+It can be done either through content delivery network or by downloading & uploading the source files to the project. <br><br>
+**Steps for uploading:**
+1. Go to getbootstrap.com > Download > Compiled CSS and JS Download
+2. In css folder (of the file that you just downloaded) copy *bootstrap.min.css* and *bootstrap.min.css.map* and put it into the project **assets** folder
+3. In js folder (of the file that you just downloaded) copy *bootstrap.min.js* and *bootstrap.min.js.map* and put it into the project **assets** folder
+4. In VS code go to layout/theme.liquid 
