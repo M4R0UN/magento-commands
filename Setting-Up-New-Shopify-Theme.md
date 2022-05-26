@@ -18,6 +18,6 @@ Or follow instructions <a href="https://shopify.dev/themes/tools/theme-kit">here
 1. Go to Apps > Customize your store > Search for theme kit > Add app > Install app > Create theme Kit password > fill out name and email > Create password
 2. Check your email it should give you the password
 3. In the command line go to your project folder and run:
-    `theme new --password=[password from previous step] --store='mystore.myshopify.com' --name=[name your theme]
+    `theme new --password=[password from previous step] --store='mystore.myshopify.com' --name=[name your theme]`
     
 ###### Dont forget to add gitignore for config.yml
