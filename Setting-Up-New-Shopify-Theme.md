@@ -58,4 +58,6 @@ to
 `{{ content_for_index }}` an object used in the index.liquid. It allows you to customize your homepage dynamically. By using this object , you will have the "Add Section" button which you can find on customizer page. <br>
 `schema` tags are used to create settings for your sections and you can find these settings in your customizer page. Schema tags only accepts JSON formatted code. <br>
 `{% capture %}{% endcapture %}` Capture is a variable tag used to capture the string inside of the opening and closing tags and assign it to a variable. Variables that you create using capture are stored as strings. <br>
-`{% cycle %}` Loops through a group of strings and outputs them in the order that they were passed as parameters. Each time cycle is called, the next string that was passed as a parameter is output.
+`{% cycle %}` Loops through a group of strings and outputs them in the order that they were passed as parameters. Each time cycle is called, the next string that was passed as a parameter is output.<br>
+`selected_or_first_available_variant` is an attribute of products object, used to return the variant object of the selected product<br>
+
