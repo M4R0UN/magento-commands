@@ -60,5 +60,5 @@ to
 `{% capture %}{% endcapture %}` Capture is a variable tag used to capture the string inside of the opening and closing tags and assign it to a variable. Variables that you create using capture are stored as strings. <br>
 `{% cycle %}` Loops through a group of strings and outputs them in the order that they were passed as parameters. Each time cycle is called, the next string that was passed as a parameter is output.<br>
 `selected_or_first_available_variant` is an attribute of products object, used to return the variant object of the selected product<br>
-### Paginate Tag
-Is used for splitting products, articles, and search results across multiple pages. This will not only make your web pages smaller, but it will also help users to easily navigate from one page to another. 
+<br><br>
+**Paginate Tag** Is used for splitting products, articles, and search results across multiple pages. This will not only make your web pages smaller, but it will also help users to easily navigate from one page to another. 
